@@ -1,0 +1,7 @@
+<!-- UtilityModal.razor — a reusable modal dialog component that can be used for displaying various types of content -->
+<dialog id="utilityModal" hx-indicator:inherited="#utilityModal_spinner">
+    <Working Id="utilityModal_spinner"/>
+    <button class="btn btn-close" type="button" command="close" commandfor="utilityModal"></button>
+    <!-- The content of the modal will be loaded dynamically via targeted htmx requests -->
+    <div id="utilityModal_content"></div>
+</dialog>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content= "width=device-width, user-scalable=no">
+        <base href="/"/>
+        <ResourcePreloader/>
+        <link rel="stylesheet" href="@Assets["css/bootstrap.min.css"]"/>
+        <link rel="stylesheet" href="@Assets["css/common.css"]"/>
+        <link rel="stylesheet" href="@Assets["Website.styles.css"]"/>
+        <link rel="icon" type="image/png" href="@Assets["img/favicon.png"]"/>
+        <script src="@Assets["js/htmx-4.0.0-alpha8.min.js"]" crossorigin="anonymous" defer></script>
+        <script src="@Assets["js/hx-sse.min.js"]" crossorigin="anonymous" defer></script>
+        <script src="@Assets["js/alpine-3.15.8.min.js"]" defer></script>
+        <script src="@Assets["js/components.js"]" defer></script>
+        <meta name="htmx-config" content='{"extensions":"sse"}'>
+        <title>@Title</title>
+    </head>
+
+    <body>
+        @ChildContent
+    </body>
+
+</html>
+
+@code {
+
+    [Parameter]
+    public RenderFragment? ChildContent  { get; set; }
+    
+    [Parameter]
+    public string? Title { get; set; }
+
+}

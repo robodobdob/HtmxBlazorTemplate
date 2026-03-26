@@ -1,0 +1,31 @@
+@if (HttpContext!.Request.IsHtmx())
+{
+    @ChildContent
+}
+else 
+{
+    <BodyLayout Title="My Application">
+
+        <!-- Main layout for the application, used on all non-HTMX requests -->
+        <main>
+            <nav>
+                <a href="/" class="btn-link"><h3>My Application</h3></a>
+            </nav>
+
+            @ChildContent
+
+            <UtilityModal />
+            
+        </main>
+
+    </BodyLayout>
+}
+
+@code {
+    [CascadingParameter]
+    private HttpContext? HttpContext { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent  { get; set; }
+
+}

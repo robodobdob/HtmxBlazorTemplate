@@ -1,0 +1,9 @@
+#utilityModal {
+    width: 100%;
+
+    #utilityModal_content {
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 1rem;
+    }
+}

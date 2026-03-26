@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+        <ContainerRepository>HtmxBlazorTemplate</ContainerRepository>
+        <RootNamespace>Website</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.3" />
+        <PackageReference Include="Scalar.AspNetCore" Version="2.12.48" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\css\" />
+      <Folder Include="wwwroot\img\" />
+      <Folder Include="wwwroot\js\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Features\Shared\Components\BodyLayout.razor" />
+      <AdditionalFiles Include="Features\Shared\Components\Error.razor" />
+      <AdditionalFiles Include="Features\Shared\Components\Home.razor" />
+      <AdditionalFiles Include="Features\Shared\Components\NotFound.razor" />
+      <AdditionalFiles Include="Features\Shared\Components\PageLayout.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Features\Shared\Layout\BodyLayout.razor" />
+      <_ContentIncludedByDefault Remove="Features\Shared\Layout\PageLayout.razor" />
+      <_ContentIncludedByDefault Remove="Features\Shared\Pages\Error.razor" />
+      <_ContentIncludedByDefault Remove="Features\Shared\Pages\Home.razor" />
+      <_ContentIncludedByDefault Remove="Features\Shared\Pages\NotFound.razor" />
+    </ItemGroup>
+
+</Project>

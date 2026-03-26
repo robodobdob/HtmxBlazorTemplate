@@ -1,0 +1,50 @@
+nav {
+    background-color: rgba(var(--bs-primary-rgb));
+    color: rgba(var(--bs-light-rgb));
+
+    justify-content: space-between;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0 1rem;;
+
+    h3 {
+        margin: 0.5rem 0;
+    }
+
+    a, .btn-link {
+        color: rgba(var(--bs-light-rgb));
+        white-space: nowrap;
+        text-decoration: none;
+
+        &:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .controls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .btn {
+            padding: 0.25rem;
+        }
+    }
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#logout-form {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}

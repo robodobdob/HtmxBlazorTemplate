@@ -1,0 +1,43 @@
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+dialog {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgba(var(--bs-light-rgb));
+
+    &[open] {
+        display: flex;
+        opacity: 1;
+        pointer-events: inherit;
+        flex-direction: column;
+        border: none !important;
+        border-radius: 12px;
+        box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 0 25px 50px -12px rgba(0, 0, 0, .25);
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, .25);
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background-color: white;
+    }
+
+    .htmx-indicator {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+}
