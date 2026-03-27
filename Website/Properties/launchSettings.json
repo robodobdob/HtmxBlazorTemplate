@@ -4,7 +4,7 @@
       "https": {
         "commandName": "Project",
         "dotnetRunMessages": true,
-        "launchBrowser": false,
+        "launchBrowser": true,
         "useSSL": true,
         "applicationUrl": "https://localhost:33150",
         "environmentVariables": {
@@ -15,7 +15,7 @@
       "http": {
         "commandName": "Project",
         "dotnetRunMessages": true,
-        "launchBrowser": false,
+        "launchBrowser": true,
         "useSSL": false,
         "applicationUrl": "http://localhost:33110",
         "environmentVariables": {
