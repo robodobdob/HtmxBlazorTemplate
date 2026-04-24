@@ -1,0 +1,12 @@
+﻿@page "/"
+
+<PageLayout>
+
+    <PageTitle>My Application</PageTitle>
+    <h1>Hello there...</h1>
+    
+    <div hx-get="/home/datetime" hx-trigger="load, every 5s"></div>
+    
+    <button class="btn btn-primary" hx-get="/home/datetime">Tell me the time</button>
+    
+</PageLayout>

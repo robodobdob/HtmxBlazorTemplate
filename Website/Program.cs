@@ -2,7 +2,9 @@
 using System.Threading.RateLimiting;
 // using Microsoft.AspNetCore.Authentication.Cookies;
 using Scalar.AspNetCore;
+using Website;
 using Website.Features;
+using Website.Features.Home;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,7 +63,7 @@ var app = builder.Build();
 // 1. Exception handling (outermost – catches everything below)
 if (app.Environment.IsDevelopment())
 {
-    //app.UseDeveloperExceptionPage();
+    app.UseDeveloperExceptionPage();
     app.MapOpenApi();
     app.MapScalarApiReference();
 }
@@ -97,25 +99,7 @@ app.UseAntiforgery();
 // Endpoint mapping
 // -----------------------------------------------------------------------
 
-// var notesGroup = app.MapGroup("/auth")
-//     .MapAuthEndpoints()
-//     .WithTags("Authentication");
-//
-// var authGroup = app.MapGroup("/notes")
-//     .MapNotesEndpoints()
-//     .RequireAuthorization()
-//     .WithTags("Notes")
-//     .RequireRateLimiting("fixed");
-//
-// var chatGroup = app.MapGroup("/chat")
-//     .MapChatEndpoints()
-//     .RequireAuthorization()
-//     .WithTags("Chat")
-//     .RequireRateLimiting("fixed");
-
-// app.MapEndpoints(notesGroup);
-// app.MapEndpoints(authGroup);
-// app.MapEndpoints(chatGroup);
+app.MapGroup("/home").MapHomeEndpoints();
 
 app.MapRazorComponents<App>();
 

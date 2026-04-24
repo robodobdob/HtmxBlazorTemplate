@@ -17,13 +17,11 @@
     <ItemGroup>
       <Folder Include="wwwroot\css\" />
       <Folder Include="wwwroot\img\" />
-      <Folder Include="wwwroot\js\" />
     </ItemGroup>
 
     <ItemGroup>
       <AdditionalFiles Include="Features\Shared\Components\BodyLayout.razor" />
       <AdditionalFiles Include="Features\Shared\Components\Error.razor" />
-      <AdditionalFiles Include="Features\Shared\Components\Home.razor" />
       <AdditionalFiles Include="Features\Shared\Components\NotFound.razor" />
       <AdditionalFiles Include="Features\Shared\Components\PageLayout.razor" />
     </ItemGroup>
